@@ -1,0 +1,499 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: linear-gradient(135deg, #111111 0%, #333333 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #000000, #444444);
+    margin: 0 0 40px 0;
+    border-radius: 0;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Main content */
+main {
+    padding: 20px 0;
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+/* Content layout */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Card styles */
+.card {
+    background: #333333;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+    border-left: 5px solid #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.card h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: #eeeeee;
+    font-size: 1.1rem;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dddddd;
+}
+
+.card li i {
+    color: #ffffff;
+}
+
+/* Features grid */
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    background: #444444;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.feature:hover {
+    background: #555555;
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    color: #dddddd;
+    margin-bottom: 0;
+}
+
+/* Main content wrapper */
+main {
+    padding: 40px 20px;
+}
+
+.content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+
+.text-block {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+
+.text-block h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.text-block p {
+    color: #eeeeee;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.text-block ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 25px;
+}
+
+.text-block li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #dddddd;
+    font-size: 1.1rem;
+}
+
+.text-block li i {
+    color: #ffffff;
+}
+
+.image-block {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+/* Staggered image effects - subtle vertical offset only */
+.content-block:nth-child(1) .image-block {
+    transform: translateY(-15px);
+}
+
+.content-block:nth-child(2) .image-block {
+    transform: translateY(20px);
+}
+
+.content-block:nth-child(3) .image-block {
+    transform: translateY(-10px);
+}
+
+.content-block:nth-child(4) .image-block {
+    transform: translateY(25px);
+}
+
+.image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-block img:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.image-caption {
+    text-align: center;
+    margin-top: 15px;
+    color: #cccccc;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+
+/* Features within text blocks */
+.text-block .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.text-block .feature {
+    text-align: center;
+    padding: 25px;
+    background: #444444;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+}
+
+.text-block .feature:hover {
+    background: #555555;
+}
+
+.text-block .feature i {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.text-block .feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.text-block .feature p {
+    font-size: 1rem;
+    color: #dddddd;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(90deg, #000000, #444444);
+    margin: 40px 0 0 0;
+    border-radius: 0;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social a {
+    color: white;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header {
+        margin: -20px -20px 20px;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        margin: 0 -20px -20px;
+        padding: 20px;
+    }
+
+    .social a {
+        font-size: 1.5rem;
+    }
+
+    /* New layout responsive styles */
+    main {
+        padding: 30px 15px;
+    }
+
+    .content-block {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .content-block:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .text-block, .image-block {
+        min-width: 100%;
+    }
+
+    .text-block h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-block p {
+        font-size: 1.1rem;
+    }
+
+    .text-block .features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Reset staggered layout for tablets */
+    .content-block {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .image-block {
+        width: 100%;
+        max-width: 100%;
+        transform: none !important;
+        margin-bottom: 30px;
+    }
+
+    .text-block {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        background-color: rgba(34, 34, 34, 0.9);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    /* New layout small screen adjustments */
+    main {
+        padding: 20px 10px;
+    }
+
+    .content-block {
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .text-block h2 {
+        font-size: 1.6rem;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .text-block p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .text-block li {
+        font-size: 1rem;
+    }
+
+    .image-caption {
+        font-size: 1rem;
+    }
+
+    /* Reset staggered layout for mobile */
+    .content-block {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .image-block {
+        width: 100%;
+        max-width: 100%;
+        transform: none !important;
+        margin-bottom: 25px;
+    }
+
+    .text-block {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        background-color: rgba(34, 34, 34, 0.9);
+    }
+}
