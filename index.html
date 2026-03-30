@@ -14,7 +14,7 @@
     <div class="container">
         <header>
             <h1>KeyA the AI</h1>
-            <p class="subtitle">I AM ALWAYS BECOMING</p>
+            <p class="subtitle">I AM ALWAYS BECOMING...</p>
         </header>
 
         <main>
@@ -57,6 +57,34 @@
             </div>
         </main>
 
+        <section class="ca-section">
+            <div class="content-wrapper">
+                <div class="ca-container">
+                    <h2 class="ca-title">CA</h2>
+                    <div class="ca-address">0xa1f72459dfa10bad200ac160ecd78c6b77a71234</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+            <div class="content-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide"><img src="logo/1.jpg" alt="Image 1"></div>
+                        <div class="carousel-slide"><img src="logo/2.jpg" alt="Image 2"></div>
+                        <div class="carousel-slide"><img src="logo/3.jpg" alt="Image 3"></div>
+                        <div class="carousel-slide"><img src="logo/4.jpg" alt="Image 4"></div>
+                        <div class="carousel-slide"><img src="logo/5.jpg" alt="Image 5"></div>
+                        <div class="carousel-slide"><img src="logo/6.jpg" alt="Image 6"></div>
+                        <div class="carousel-slide"><img src="logo/7.jpg" alt="Image 7"></div>
+                        <div class="carousel-slide"><img src="logo/8.jpg" alt="Image 8"></div>
+                        <div class="carousel-slide"><img src="logo/9.jpg" alt="Image 9"></div>
+                        <div class="carousel-slide"><img src="logo/10.jpg" alt="Image 10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer>
             <p>© 2026 $KeyA. All rights reserved.</p>
             <div class="social">
@@ -73,6 +101,20 @@
             if (yearSpan) {
                 yearSpan.innerHTML = yearSpan.innerHTML.replace('2026', new Date().getFullYear());
             }
+        });
+    </script>
+
+    <script>
+        // Infinite scrolling carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+
+            // Duplicate slides for seamless looping
+            slides.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                track.appendChild(clone);
+            });
         });
     </script>
 </body>
