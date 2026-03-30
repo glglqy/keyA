@@ -190,7 +190,7 @@ main {
 .text-block {
     flex: 1;
     min-width: 300px;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 
@@ -205,8 +205,8 @@ main {
 
 .text-block p {
     color: #eeeeee;
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-size: 2.0rem;
+    line-height: 1.5;
     margin-bottom: 25px;
 }
 
@@ -403,7 +403,8 @@ footer p {
     }
 
     .text-block p {
-        font-size: 1.1rem;
+        font-size: 1.7rem;
+        line-height: 1.5;
     }
 
     .text-block .features {
@@ -428,7 +429,7 @@ footer p {
     .text-block {
         width: 100%;
         max-width: 100%;
-        padding: 20px;
+        padding: 30px 20px;
         background-color: rgba(34, 34, 34, 0.9);
     }
 }
@@ -464,8 +465,8 @@ footer p {
     }
 
     .text-block p {
-        font-size: 1rem;
-        line-height: 1.7;
+        font-size: 1.4rem;
+        line-height: 1.5;
     }
 
     .text-block li {
@@ -493,7 +494,7 @@ footer p {
     .text-block {
         width: 100%;
         max-width: 100%;
-        padding: 20px;
+        padding: 30px 20px;
         background-color: rgba(34, 34, 34, 0.9);
     }
 }
