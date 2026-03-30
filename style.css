@@ -598,10 +598,11 @@ footer p {
 .carousel-track {
     display: flex;
     gap: 30px;
-    animation: scroll 8s linear infinite;
     flex-shrink: 0;
     will-change: transform;
     width: max-content;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 .carousel-slide {
@@ -617,14 +618,6 @@ footer p {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
 
 .carousel-container:hover .carousel-track {
     animation-play-state: paused;
