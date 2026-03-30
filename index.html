@@ -123,6 +123,8 @@
 
             // Create keyframes dynamically for perfect looping
             const style = document.createElement('style');
+            // Use 8 seconds for one complete cycle (original slides width)
+            const animationDuration = 8; // seconds
             style.textContent = `
                 @keyframes seamlessScroll {
                     0% {
@@ -134,18 +136,35 @@
                 }
 
                 .carousel-track {
-                    animation: seamlessScroll ${slides.length * 2}s linear infinite;
+                    animation: seamlessScroll ${animationDuration}s linear infinite;
                 }
             `;
             document.head.appendChild(style);
 
-            // Reset position when animation completes to avoid jump
-            track.addEventListener('animationiteration', function() {
-                // Force reflow to ensure smooth reset
-                this.style.animation = 'none';
-                void this.offsetWidth; // Trigger reflow
-                this.style.animation = `seamlessScroll ${slides.length * 2}s linear infinite`;
-            });
+            // Monitor animation to ensure perfect looping
+            let lastTime = 0;
+            function monitorAnimation(currentTime) {
+                if (!lastTime) lastTime = currentTime;
+                const elapsed = (currentTime - lastTime) / 1000;
+
+                // If animation is near completion, prepare for smooth reset
+                if (elapsed >= animationDuration * 0.95) {
+                    // Reset position without visual jump
+                    track.style.transform = 'translateX(0)';
+                    track.style.animation = 'none';
+                    void track.offsetWidth; // Trigger reflow
+                    track.style.animation = '';
+                    track.style.transform = '';
+                    lastTime = currentTime;
+                }
+
+                requestAnimationFrame(monitorAnimation);
+            }
+
+            // Start monitoring after a short delay to let animation begin
+            setTimeout(() => {
+                requestAnimationFrame(monitorAnimation);
+            }, 100);
         });
     </script>
 </body>
