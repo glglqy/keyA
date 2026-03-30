@@ -394,6 +394,10 @@ footer p {
         flex-direction: column;
     }
 
+    .content-block:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
     .text-block, .image-block {
         min-width: 100%;
     }
@@ -413,11 +417,6 @@ footer p {
     }
 
     /* Reset staggered layout for tablets */
-    .content-block {
-        flex-direction: column;
-        gap: 40px;
-        margin-bottom: 60px;
-    }
 
     .image-block {
         width: 100%;
@@ -482,6 +481,10 @@ footer p {
         flex-direction: column;
         gap: 30px;
         margin-bottom: 50px;
+    }
+
+    .content-block:nth-child(odd) {
+        flex-direction: column-reverse;
     }
 
     .image-block {
@@ -595,7 +598,7 @@ footer p {
 .carousel-track {
     display: flex;
     gap: 30px;
-    animation: scroll 30s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 .carousel-slide {
