@@ -141,30 +141,18 @@
             `;
             document.head.appendChild(style);
 
-            // Monitor animation to ensure perfect looping
-            let lastTime = 0;
-            function monitorAnimation(currentTime) {
-                if (!lastTime) lastTime = currentTime;
-                const elapsed = (currentTime - lastTime) / 1000;
-
-                // If animation is near completion, prepare for smooth reset
-                if (elapsed >= animationDuration * 0.95) {
-                    // Reset position without visual jump
-                    track.style.transform = 'translateX(0)';
-                    track.style.animation = 'none';
-                    void track.offsetWidth; // Trigger reflow
-                    track.style.animation = '';
-                    track.style.transform = '';
-                    lastTime = currentTime;
-                }
-
-                requestAnimationFrame(monitorAnimation);
-            }
-
-            // Start monitoring after a short delay to let animation begin
-            setTimeout(() => {
-                requestAnimationFrame(monitorAnimation);
-            }, 100);
+            // Listen for animation iteration to ensure seamless looping
+            track.addEventListener('animationiteration', function() {
+                // At the moment of iteration, reset position without visual jump
+                // This happens when animation completes one cycle
+                this.style.animation = 'none';
+                // Force reflow to apply the change
+                void this.offsetWidth;
+                // Immediately reset transform to starting position
+                this.style.transform = 'translate3d(0, 0, 0)';
+                // Restart animation after reset
+                this.style.animation = `seamlessScroll ${animationDuration}s linear infinite`;
+            });
         });
     </script>
 </body>
