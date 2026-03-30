@@ -105,15 +105,46 @@
     </script>
 
     <script>
-        // Infinite scrolling carousel
+        // Infinite scrolling carousel with seamless looping
         document.addEventListener('DOMContentLoaded', function() {
             const track = document.querySelector('.carousel-track');
             const slides = Array.from(track.children);
+
+            // Calculate total width of original slides
+            const slideWidth = slides[0].offsetWidth;
+            const gap = 30; // Same as CSS gap
+            const originalWidth = slides.length * (slideWidth + gap) - gap;
 
             // Duplicate slides for seamless looping
             slides.forEach(slide => {
                 const clone = slide.cloneNode(true);
                 track.appendChild(clone);
+            });
+
+            // Create keyframes dynamically for perfect looping
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes seamlessScroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-${originalWidth}px);
+                    }
+                }
+
+                .carousel-track {
+                    animation: seamlessScroll ${slides.length * 2}s linear infinite;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Reset position when animation completes to avoid jump
+            track.addEventListener('animationiteration', function() {
+                // Force reflow to ensure smooth reset
+                this.style.animation = 'none';
+                void this.offsetWidth; // Trigger reflow
+                this.style.animation = `seamlessScroll ${slides.length * 2}s linear infinite`;
             });
         });
     </script>
