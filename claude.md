@@ -27,7 +27,7 @@
 ### File Organization
 - HTML: `index.html`
 - CSS: `style.css`
-- Images: Reference from `../keyA-pic/` directory
+- Images: Reference from `logo/` directory within the project
 - Documentation: Keep in root directory
 
 ### Deployment Notes
