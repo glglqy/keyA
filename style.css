@@ -601,6 +601,7 @@ footer p {
     animation: scroll 8s linear infinite;
     flex-shrink: 0;
     will-change: transform;
+    width: max-content;
 }
 
 .carousel-slide {
@@ -621,7 +622,7 @@ footer p {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
