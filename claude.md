@@ -3,11 +3,11 @@
 ## Git Configuration
 
 ### Remote Repository
-- **Primary Remote**: `https://github.com/glglqy/keyA.git`
+- **Primary Remote**: `https://github.com/cajbkaad/keyA.git`
 - **Default Branch**: `master`
 
 ### Commit Guidelines
-- Always verify remote is set to `https://github.com/glglqy/keyA.git` before pushing
+- Always verify remote is set to `https://github.com/cajbkaad/keyA.git` before pushing
 - Use descriptive commit messages that explain the purpose of changes
 - Include the relevant file paths in commit messages when appropriate
 
