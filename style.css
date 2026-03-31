@@ -344,6 +344,19 @@ footer p {
     color: #ffffff;
 }
 
+.social-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: contain;
+    vertical-align: middle;
+    filter: invert(1); /* Make white for dark background */
+    transition: transform 0.3s ease;
+}
+
+.social a:hover .social-icon {
+    transform: translateY(-5px);
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -377,6 +390,11 @@ footer p {
 
     .social a {
         font-size: 1.5rem;
+    }
+
+    .social-icon {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     /* New layout responsive styles */
