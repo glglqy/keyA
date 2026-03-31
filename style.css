@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     line-height: 1.6;
     color: #ffffff;
     background: linear-gradient(135deg, #111111 0%, #333333 100%);
@@ -44,12 +44,17 @@ header h1 {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    letter-spacing: 0.05em;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 header .subtitle {
     font-size: 1.3rem;
     opacity: 0.9;
     font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Main content */
@@ -201,13 +206,20 @@ main {
     display: flex;
     align-items: center;
     gap: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .text-block p {
     color: #eeeeee;
     font-size: 2.0rem;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 25px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .text-block ul {
@@ -373,6 +385,8 @@ footer p {
         font-size: 2.5rem;
         flex-direction: column;
         gap: 10px;
+        letter-spacing: 0.05em;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
     }
 
     .content {
@@ -422,11 +436,18 @@ footer p {
 
     .text-block h2 {
         font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     }
 
     .text-block p {
         font-size: 1.7rem;
-        line-height: 1.5;
+        line-height: 1.6;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     }
 
     .text-block .features {
@@ -479,11 +500,18 @@ footer p {
         font-size: 1.6rem;
         flex-direction: column;
         gap: 8px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     }
 
     .text-block p {
         font-size: 1.4rem;
-        line-height: 1.5;
+        line-height: 1.6;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     }
 
     .text-block li {
@@ -539,6 +567,8 @@ footer p {
     font-weight: 700;
     margin-bottom: 30px;
     letter-spacing: 2px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
 }
 
 .ca-address {
